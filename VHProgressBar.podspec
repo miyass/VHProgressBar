@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = 'VHProgressBar'
-  s.version = '1.0.0'
+  s.version = '1.0.1'
   s.summary = 'Vartical and Horizontal ProgressBar'
   s.homepage = 'https://github.com/miyass/VHProgressBar'
   s.social_media_url = 'https://github.com/miyass/VHProgressBar'
