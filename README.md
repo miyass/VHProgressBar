@@ -35,6 +35,7 @@ verticalProgressBar.animateProgress(duration: 2.0, progressValue: 0.7)
 horizontalProgressBar.animateProgress(duration: 3.0, progressValue: 0.2)
 
 // start repeat animation
+// you can choose type "normal" or "reverse"
 verticalProgressBar.startAnimation(type: "normal", duration: 3.0)
 //stop repeat animation  
 verticalProgressBar.stopAnimation()
@@ -46,11 +47,11 @@ verticalProgressBar.stopAnimation()
 
 drop a UIView into your viewController in your storyboard, and set class to `VerticalProgressBar` or `HorizontalProgressBar`
 
-![storyboard1](images/storyboard1_demo.png)  
+![storyboard1](images/storyboard2_demo.png)  
 
 customize your progressbar by setting the properties from the Interface Builder.
 
-![storyboard2](images/storyboard2_demo.png)  
+![storyboard2](images/storyboard1_demo.png)  
 
 ### Supported Attributes
 
