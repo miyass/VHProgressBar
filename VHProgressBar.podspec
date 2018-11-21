@@ -2,7 +2,7 @@ Pod::Spec.new do |s|
   s.name = 'VHProgressBar'
   s.version = '1.0.0'
   s.summary = 'Vartical and Horizontal ProgressBar'
-  s.homepage = 'https://github.com/s0hno/UpdateChecker'
+  s.homepage = 'https://github.com/miyass/VHProgressBar'
   s.social_media_url = 'https://github.com/miyass/VHProgressBar'
   s.authors = { 'Sohei Miyakura' => 'exe.miyakura0629@gmail.com' }
   s.source = { :git => 'https://github.com/miyass/VHProgressBar.git', :tag => s.version }

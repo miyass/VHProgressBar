@@ -2,13 +2,13 @@
 //  VerticalProgressBar.swift
 //  VHProgressBar
 //
-//  Created by 宮倉宗平 on 2018/11/21.
+//  Created by Sohei Miyakura on 2018/11/21.
 //
 
 import UIKit
 
 @IBDesignable
-class VerticalProgressBar: UIView {
+open class VerticalProgressBar: UIView {
     
     fileprivate var progressView: UIView!
     fileprivate var animator: UIViewPropertyAnimator!
@@ -49,12 +49,12 @@ class VerticalProgressBar: UIView {
         }
     }
     
-    override init(frame: CGRect) {
+    override public init(frame: CGRect) {
         super.init(frame: frame)
         initProgressView()
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder:aDecoder)
         initProgressView()
     }
@@ -111,7 +111,7 @@ extension VerticalProgressBar {
 
 extension VerticalProgressBar {
     
-    func animateProgress(duration: CGFloat,  progressValue: CGFloat) {
+    open func animateProgress(duration: CGFloat,  progressValue: CGFloat) {
         
         if !(0 < progressValue || progressValue < 1.0) {
             return
@@ -126,7 +126,7 @@ extension VerticalProgressBar {
         animator.startAnimation()
     }
     
-    func startAnimation(type: String, duration: CGFloat) {
+    open func startAnimation(type: String, duration: CGFloat) {
         switch type {
         case "normal":
             runAnimation(reverse: false, duration: duration)
@@ -150,11 +150,11 @@ extension VerticalProgressBar {
         animator.startAnimation()
     }
     
-    func stopAnimation() {
+    open func stopAnimation() {
         animator.stopAnimation(true)
     }
     
-    func getProgress() -> CGFloat {
+    open func getProgress() -> CGFloat {
         return self.progressView.frame.size.height
     }
 }
