@@ -1,12 +1,12 @@
 # VHProgressBar
-The **VHProgressBar ** is vertical and horizontal animated progress bar.
+The **VHProgressBar** is vertical and horizontal animated progress bar.
 
 
 ## Installation
 
 ### Cocoapods:
 
-Add this code to your "Podfile"
+Add this code to your `Podfile`
 ```
 pod 'VHProgressBar', '~> 1.0'
 ```
@@ -14,9 +14,6 @@ Install into your project:
 ```
 $ pod install
 ```
-
-### Carthage:
-
 
 ## Usage
 
@@ -47,10 +44,12 @@ verticalProgressBar.stopAnimation()
 
 ### By using storyboard
 
-drop a UIView into your viewController in your storyboard, and set class to VerticalProgressBar or HorizontalProgressBar  
+drop a UIView into your viewController in your storyboard, and set class to `VerticalProgressBar` or `HorizontalProgressBar`
+
 ![storyboard1](images/storyboard1_demo.png)  
 
-customize your progressbar by setting the properties from the Interface Builder.  
+customize your progressbar by setting the properties from the Interface Builder.
+
 ![storyboard2](images/storyboard2_demo.png)  
 
 ### Supported Attributes
