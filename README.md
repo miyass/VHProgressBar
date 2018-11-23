@@ -1,6 +1,8 @@
 # VHProgressBar
 The **VHProgressBar** is vertical and horizontal animated progress bar.
 
+![progressTest1](images/progressTest1.gif)
+![progressTest2](images/progressTest2.gif)
 
 ## Installation
 
