@@ -12,6 +12,7 @@ open class HorizontalProgressBar: UIView {
     
     fileprivate var progressView: UIView!
     fileprivate var animator: UIViewPropertyAnimator!
+    fileprivate var isAnimating: Bool = false
     
     @IBInspectable public var bgColor: UIColor = UIColor.white {
         didSet {
@@ -111,11 +112,9 @@ extension HorizontalProgressBar {
 extension HorizontalProgressBar {
     
     open func animateProgress(duration: CGFloat, progressValue: CGFloat) {
-        
         if !(0 < progressValue || progressValue < 1.0) {
             return
         }
-        
         configureProgressView()
         let timing: UICubicTimingParameters = UICubicTimingParameters(animationCurve: .easeInOut)
         animator = UIViewPropertyAnimator(duration: TimeInterval(duration), timingParameters: timing)
@@ -126,7 +125,9 @@ extension HorizontalProgressBar {
     }
     
     open func startAnimation(type: String, duration: CGFloat) {
-        
+        if isAnimating {
+            return
+        }
         switch type {
         case "normal":
             runAnimation(reverse: false, duration: duration)
@@ -140,7 +141,6 @@ extension HorizontalProgressBar {
     }
     
     fileprivate func runAnimation(reverse: Bool, duration: CGFloat) {
-        
         configureProgressView()
         animator = UIViewPropertyAnimator.runningPropertyAnimator(withDuration: TimeInterval(duration), delay: 0.0, options: [.curveEaseInOut], animations: {
             UIView.setAnimationRepeatCount(1000)
@@ -148,17 +148,19 @@ extension HorizontalProgressBar {
             self.progressView.frame.size.width += self.pgWidth
         }, completion: { _ in
         })
+        isAnimating = true
         animator.startAnimation()
     }
     
     open func stopAnimation() {
-        
+        if !isAnimating {
+            return
+        }
+        isAnimating = false
         animator.stopAnimation(true)
-        print(progressView.frame.size.width)
     }
     
     open func getProgress() -> CGFloat {
-        
         return self.progressView.frame.size.width
     }
 }

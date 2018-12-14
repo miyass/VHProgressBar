@@ -1,12 +1,12 @@
 Pod::Spec.new do |s|
   s.name = 'VHProgressBar'
-  s.version = '1.0.1'
+  s.version = '1.0.2'
   s.summary = 'Vartical and Horizontal ProgressBar'
   s.homepage = 'https://github.com/miyass/VHProgressBar'
   s.social_media_url = 'https://github.com/miyass/VHProgressBar'
   s.authors = { 'Sohei Miyakura' => 'exe.miyakura0629@gmail.com' }
   s.source = { :git => 'https://github.com/miyass/VHProgressBar.git', :tag => s.version }
-  s.ios.deployment_target = '12.1'
+  s.ios.deployment_target = '10.0'
   s.source_files = 'Sources/VHProgressBar/*.swift'
   s.license = {
     :type => "MIT",
