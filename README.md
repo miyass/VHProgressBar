@@ -27,10 +27,21 @@ import UIKit
 import VHProgressBar
 
  // vertical progress bar
-var verticalProgressBar: VerticalProgressBar!
+let verticalProgressBar = VerticalProgressBar()
 // horizontal progress bar
-var horizontalProgressBar: HorizontalProgressBar!
+let horizontalProgressBar = HorizontalProgressBar()
 
+self.view.addSubview(verticalProgressBar)
+self.view.addSubview(horizontalProgressBar)
+
+//adjust layout
+verticalProgressBar.pgHeight = 350
+verticalProgressBar.pgWidth = 35
+verticalProgressBar.frameBold = 0.5
+
+horizontalProgressBar.pgHeight = 50
+horizontalProgressBar.pgWidth = 500
+horizontalProgressBar.frameBold = 1.0
 
 // start simple animation
 verticalProgressBar.animateProgress(duration: 2.0, progressValue: 0.7)
